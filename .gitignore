@@ -53,3 +53,14 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# not files without extensions, ie the binary
+*
+!*/
+!*.*
+
+# C VScode temp files
+vscode
+.vscode/*
+main.**
+
