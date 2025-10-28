@@ -60,7 +60,8 @@ dkms.conf
 !*.*
 
 # C VScode temp files
+main.dSYM
 vscode
 .vscode/*
-main.**
+**.c
 
