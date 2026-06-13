@@ -1,37 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "sum.h"
+#include "ref.h"
 
-void swap(int *x, int *y);
+int main()
+{
+	int *arr = malloc(sizeof(int) * 10);
 
-int main() {
+	for (int i = 0; i < 10; i++) {
+		arr[i] = i;
+		printf("arr[%d] = %d\n", i, arr[i]);
+	}
+	printf("\n");
+	for (int i = 0; i < 15; i++) {
+		printf("arr[%d] = %d\n", i, arr[i]);
+	}
+	int x = 5;
+	int y = 10;
+	int result = sum(x, y);
 
-    printf("__STDC_VERSION__: %ld\n", __STDC_VERSION__);
+	printf("x = %d, y = %d\n", x, y);
 
-    int x = 65;
-    int *p = &x;
-
-    printf("Value from print: %u\n", x);
-    printf("Address of x is: %u\n", x);
-    printf("Address of p is: %p\n", p);
-
-    int a = 5;
-    int b = 10;
-
-    printf("a is %d\n", a);
-    printf("b is %d\n", b);
-
-    // pass int the addresses of a and b
-    swap(&a, &b);
-
-    printf("a is now %d\n", a);
-    printf("b is now %d\n", b);
-
-    return 0;
-}
-
-// function return nothing, just swap in mem. // pass by ref?
-void swap(int *a, int *b) {
-    int temp = 0;
-    temp = *a;
-    *a = *b;
-    *b = temp;
+	sum_ref(&x, &y);
+	printf("x = %d, y = %d\b\n", x, y);
 }
