@@ -57,7 +57,7 @@ dkms.conf
 # not files without extensions, ie the binary
 *
 !*/
-!*.*
+#!*.*
 
 # C VScode temp files
 main.dSYM
