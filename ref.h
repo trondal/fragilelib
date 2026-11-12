@@ -1,1 +1,0 @@
-void sum_ref(int *a, int *b);
