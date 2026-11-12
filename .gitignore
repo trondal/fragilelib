@@ -63,5 +63,4 @@ dkms.conf
 main.dSYM
 vscode
 .vscode/*
-**.c
 
