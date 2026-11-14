@@ -1,6 +1,15 @@
 CC=clang
-CFLAGS=-g -O1 -std=c17 -Wall -Wextra -Wpedantic -Werror -Wshadow -Wconversion -Wundef -Wformat=2
-#CFLAGS=-g -Wall
+CFLAGS=-g \
+	-O1 \
+	-std=c23 \
+	-Wall \
+	-Wextra \
+	-Wpedantic \
+	-Werror \
+	-Wshadow \
+	-Wconversion \
+	-Wundef \
+	-Wformat=2 
 SRC=src
 OBJ=obj
 SRCS=$(wildcard $(SRC)/*.c)
@@ -19,4 +28,5 @@ $(OBJ)/%.o:$(SRC)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
+	@echo "Removing all except source files"
 	rm -rf $(BINDIR)/* $(OBJ)/*
